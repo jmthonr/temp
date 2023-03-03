@@ -7,6 +7,9 @@ _get_ziplink () {
     if [[ $UPSTREAM_REPO == "sbb_b" ]]
     then
         echo "aHR0cHM6Ly9naXRodWIuY29tL3RoZWptdGhvbi9qbXViL2FyY2hpdmUvbWFzdGVyLnppcA==" | base64 -d
+    elif [[ $UPSTREAM_REPO == "beta" ]]
+    then
+        echo "aHR0cHM6Ly9naXRodWIuY29tL3RoZWptdGhvbi9qbXViL2FyY2hpdmUvYmV0YS56aXA==" | base64 -d
     elif [[ $UPSTREAM_REPO =~ $regex ]]
     then
         if [[ $UPSTREAM_REPO_BRANCH ]]
@@ -27,6 +30,9 @@ _get_repolink () {
     if [[ $UPSTREAM_REPO == "sbb_b" ]]
     then
         rlink=`echo "aHR0cHM6Ly9naXRodWIuY29tL3RoZWptdGhvbi9qbXViLmdpdA" | base64 -d`
+    elif [[ $UPSTREAM_REPO == "beta" ]]
+    then
+        echo "aHR0cHM6Ly9naXRodWIuY29tL3RoZWptdGhvbi9qbXViL3RyZWUvYmV0YQ" | base64 -d
     elif [[ $UPSTREAM_REPO =~ $regex ]]
     then
         rlink=`echo "${UPSTREAM_REPO}"`
@@ -44,7 +50,7 @@ _run_python_code() {
 _run_catpack_git() {
     $(_run_python_code 'from git import Repo
 import sys
-OFFICIAL_UPSTREAM_REPO = "https://github.com/thejmthon/jmub"
+OFFICIAL_UPSTREAM_REPO = "https://github.com/jmthonr/temp"
 ACTIVE_BRANCH_NAME = "master"
 repo = Repo.init()
 origin = repo.create_remote("temponame", OFFICIAL_UPSTREAM_REPO)
