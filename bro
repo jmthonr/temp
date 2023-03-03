@@ -32,7 +32,7 @@ _get_repolink () {
         rlink=`echo "aHR0cHM6Ly9naXRodWIuY29tL3RoZWptdGhvbi9qbXViLmdpdA" | base64 -d`
     elif [[ $UPSTREAM_REPO == "beta" ]]
     then
-        echo "aHR0cHM6Ly9naXRodWIuY29tL3RoZWptdGhvbi9qbXViL3RyZWUvYmV0YQ" | base64 -d
+        echo "aHR0cHM6Ly9naXRodWIuY29tL3RoZWptdGhvbi9qbXViLmdpdC90cmVlL2JldGE" | base64 -d
     elif [[ $UPSTREAM_REPO =~ $regex ]]
     then
         rlink=`echo "${UPSTREAM_REPO}"`
