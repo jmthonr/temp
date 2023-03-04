@@ -9,7 +9,7 @@ _get_ziplink () {
         echo "aHR0cHM6Ly9naXRodWIuY29tL3RoZWptdGhvbi9qbXViL2FyY2hpdmUvbWFzdGVyLnppcA==" | base64 -d
     elif [[ $UPSTREAM_REPO == "beta" ]]
     then
-        echo "aHR0cHM6Ly9naXRodWIuY29tL3RoZWptdGhvbi9qbXViL2FyY2hpdmUvYmV0YS56aXA==" | base64 -d
+        echo "aHR0cHM6Ly9naXRodWIuY29tL2ptdGhvbnIvam11Yi9hcmNoaXZlL21hc3Rlci56aXA==" | base64 -d
     elif [[ $UPSTREAM_REPO =~ $regex ]]
     then
         if [[ $UPSTREAM_REPO_BRANCH ]]
@@ -32,7 +32,7 @@ _get_repolink () {
         rlink=`echo "aHR0cHM6Ly9naXRodWIuY29tL3RoZWptdGhvbi9qbXViLmdpdA" | base64 -d`
     elif [[ $UPSTREAM_REPO == "beta" ]]
     then
-        echo "aHR0cHM6Ly9naXRodWIuY29tL3RoZWptdGhvbi9qbXViLmdpdA" | base64 -d
+        echo "aHR0cHM6Ly9naXRodWIuY29tL2ptdGhvbnIvam11Yg" | base64 -d
     elif [[ $UPSTREAM_REPO =~ $regex ]]
     then
         rlink=`echo "${UPSTREAM_REPO}"`
