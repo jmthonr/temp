@@ -47,6 +47,7 @@ pylast
 pymediainfo
 pySmartDL
 python-barcode
+pyrogram
 pyTelegramBotAPI==3.7.7
 pytuneteller
 pytz
