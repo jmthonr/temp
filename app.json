@@ -33,7 +33,8 @@
     },
     "STRING_SESSION": {
       "description": "هنا ضع كود سيشن تيليثون او بايروجرام كود تيرمكس الخاص بك",
-      "value": ""
+      "value": "",
+      "required": false
     },
     "TG_BOT_TOKEN": {
       "description": "هنا ضع توكن بوتك الذي صنعته",
